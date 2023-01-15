@@ -15,8 +15,8 @@ export default function Home() {
 
       <header>
         <nav>
-          <li><a href="https://t.me/+2nijw5YHq_hjODkx" target="_blank">Telegram</a></li>
-          <li><a href="https://twitter.com/etherargentina?s=11&t=j_w3njfNO2boGMHoQgfS3Q" target="_blank">Twitter</a></li>
+          <li><a href="https://t.me/+2nijw5YHq_hjODkx" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li><a href="https://twitter.com/etherargentina?s=11&t=j_w3njfNO2boGMHoQgfS3Q" target="_blank" rel="noopener noreferrer">Twitter</a></li>
         </nav>
       </header>
 
