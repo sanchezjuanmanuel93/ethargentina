@@ -83,6 +83,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: 'neutraface-text-book'  !important;
 }
 
 body {
@@ -105,3 +106,18 @@ a {
     color-scheme: dark;
   }
 }
+
+@font-face {
+  font-family: 'neutraface-text-bold';
+  src: url('../fonts/NeutrafaceText-Bold.otf') format('opentype');
+ }
+ 
+ @font-face {
+  font-family: 'neutraface-text-book';
+  src: url('../fonts/NeutrafaceText-Book.otf') format('opentype');
+ }
+ 
+ @font-face {
+  font-family: 'becker-wood-type';
+  src: url('../fonts/becker_wood_type.ttf') format('opentype');
+ }
