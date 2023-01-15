@@ -20,7 +20,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="hero">
+      <section className="home">
         <h1>ETHEREUM ARGENTINA</h1>
         <h3>El evento de Ethereum más grande de Argentina 🚀</h3>
         <a href="https://t.me/+2nijw5YHq_hjODkx" className="btn">¡Unite a Telegram!</a>
@@ -97,9 +97,6 @@ export default function Home() {
             padding: 80px 30px;
           }
 
-          .hero h3 {
-            margin-top: 50px;
-          }
         }
 
         section h3.title{
@@ -201,10 +198,10 @@ export default function Home() {
 
 
         /*----------------
-          Hero Section
+          Home Section
         ----------------*/
 
-        .hero{
+        .home{
           position: relative;
           justify-content: center;
           min-height: 100vh;
@@ -213,7 +210,7 @@ export default function Home() {
           background-color: #5989BD;
         }
 
-        .hero .background-image{
+        .home .background-image{
           position: absolute;
           top: 0;
           left: 0;
@@ -224,7 +221,7 @@ export default function Home() {
           z-index: -1;
         }
 
-        .hero .background-image:after{
+        .home .background-image:after{
           content: '';
           position: absolute;
           top: 0;
@@ -235,18 +232,18 @@ export default function Home() {
           opacity: 0.75;
         }
 
-        .hero h1{
+        .home h1{
           font: bold 60px 'becker-wood-type';
           margin-bottom: 15px;
           letter-spacing: .2rem;
         }
 
-        .hero h3{
+        .home h3{
           font: normal 28px;
           margin-bottom: 40px;
         }
 
-        .hero a.btn{
+        .home a.btn{
           padding: 20px 46px;
           background-color: #FFF;
           color: #5989BD;
@@ -254,202 +251,31 @@ export default function Home() {
 
         @media (max-width: 800px){
 
-          .hero{
+          .home{
             min-height: 600px;
           }
 
-          .hero h1{
+          .home h1{
             font-size: 48px;
           }
 
-          .hero h3{
+          .home h3{
             font-size: 18px;
           }
 
-          .hero a.btn{
+          .home a.btn{
             padding: 15px 40px;
           }
 
         }
 
-
-
-        /*--------------------
-          Our Work Section
-        ---------------------*/
-
-        .оur-work{
-          background-color: #fff;
-        }
-
-        .our-work .grid li{
-          padding: 20px;
-          height: 350px;
-          border-radius: 3px;
-
-          background-clip: content-box;
-          background-size: cover;
-          background-position: center;
-          background-color: #333;
-        }
-
-        .our-work .grid li.small{
-          flex-basis: 40%;
-        }
-
-        .our-work .grid li.large{
-          flex-basis: 60%;
-        }
-
-
-        @media (max-width: 1000px){
-
-          .our-work .grid li.small,
-          .our-work .grid li.large{
-            flex-basis: 100%;
-          }
-
-        }
-
-
-
-        /*----------------------
-          Features Section
-        ----------------------*/
-
-        .features{
-          background-color: #f7f7f7;
-        }
-
-        .features .grid li{
-          padding: 0 30px;
-          flex-basis: 33%;
-          text-align: center;
-        }
-
-        .features .grid li i{
-            font-size: 50px;
-            color: #2196F3;
-            margin-bottom: 25px;
-        }
-
-        .features .grid li h4{
-          color: #555;
-            font-size: 20px;
-            margin-bottom: 25px;
-        }
-
-        .features .grid li p{
-            margin: 0;
-        }
-
-        @media (max-width: 1000px){
-
-          .features .grid li{
-            flex-basis: 70%;
-            margin-bottom: 65px;
-          }
-
-          .features .grid li:last-child{
-            margin-bottom: 0;
-          }
-
-        }
-
-
         @media (max-width: 600px){
 
-          .features .grid li{
-            flex-basis: 100%;
+          .home h3 {
+            margin-top: 50px;
           }
 
         }
-
-
-
-        /*--------------------
-          Reviews Section
-        --------------------*/
-
-        .reviews{
-          background-color: #fff;
-        }
-
-        .reviews .quote{
-          text-align: center;
-          width: 80%;
-            font-size: 22px;
-            font-weight: 300;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            padding: 0;
-        }
-
-        .reviews .author{
-            font-size: 18px;
-            margin-bottom: 50px;
-        }
-
-        .reviews .author:last-child{
-            margin-bottom: 0;
-        }
-
-        @media (max-width: 1000px){
-
-          .reviews .quote{
-            font-size: 20px;
-          }
-
-          .reviews .author{
-              font-size: 16px;
-          }
-
-        }
-
-
-
-        /*---------------------
-          Contact Section
-        ---------------------*/
-
-        .contact{
-          background-color: #f7f7f7;
-        }
-
-        .contact form{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          width: 80%;
-        }
-
-        .contact form input{
-          padding: 15px;
-          flex: 1;
-          margin-right: 30px;
-          font-size: 18px;
-          color: #555;
-        }
-
-        .contact form .btn{
-          padding: 18px 42px;
-        }
-
-
-        @media (max-width: 800px){
-
-          .contact form input{
-            flex-basis: 100%;
-            margin: 0 0 20px 0;
-          }
-
-        }
-
-
-
 
         /*-------------
           Footer
@@ -499,13 +325,6 @@ export default function Home() {
             padding: 80px 15px;
           }
 
-        }
-
-
-        /* -- Demo ads -- */
-
-        @media (max-width: 1200px) {
-          #bsaHolder{ display:none;}
         }
         `}</style>
     </>
