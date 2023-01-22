@@ -77,10 +77,6 @@ export default function Header() {
   
   
           @media (max-width: 700px){
-            header{
-              flex-direction: column;		
-            }
-  
             header h2{
               margin-bottom: 15px;
             }
