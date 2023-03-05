@@ -5,6 +5,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
 import logo from '../public/assets/home/logo.svg'
+import art from '../public/assets/home/services/arte.png';
 // import { Inter } from 'next/font/google'
 
 
@@ -37,6 +38,31 @@ const Home = (
         <h3>{t('subTitle')}</h3>
         <h1>{t('title')}</h1>
         <span className='home-date'>{t('eventDate')}</span>
+      </section>
+
+      <section className="services">
+        <ul className="grid">
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+        </ul>
       </section>
 
       <footer>
@@ -213,6 +239,57 @@ const Home = (
 
         }
 
+        /*-------------
+          Services
+        -------------*/
+        .services{
+          background-color: #0B1628;
+        }
+
+        .services .grid{
+          display: flex;
+          justify-content: space-around;
+        }
+
+        .services .grid li{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex-wrap: nowrap;
+        }
+
+        .services .grid li h4{
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 1rem;
+          line-height: 30px;
+          text-align: center;
+          color: #B4F4FE;
+        }
+        
+        @media (max-width: 1000px){
+        
+          .services .grid li{
+            flex-basis: 70%;
+            margin-bottom: 65px;
+          }
+        
+          .services .grid li:last-child{
+            margin-bottom: 0;
+          }
+        
+        }
+        
+        
+        @media (max-width: 600px){
+        
+          .services .grid li{
+            flex-basis: 100%;
+          }
+        
+        }
+                
         /*-------------
           Footer
         -------------*/
