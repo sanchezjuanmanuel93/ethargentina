@@ -36,7 +36,7 @@ const Home = (
         />
         <h3>{t('subTitle')}</h3>
         <h1>{t('title')}</h1>
-        <span className='home-date'>FECHA</span>
+        <span className='home-date'>{t('eventDate')}</span>
       </section>
 
       <footer>
@@ -146,29 +146,9 @@ const Home = (
           color: #fff;
           text-align: center;
           background-color: #fff;
-        }
-
-        .home .background-image{
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          background-color: #fff;
           // background-image: url('assets/home/background-bottom.png');
-          z-index: -1;
-        }
-
-        .home .background-image:after{
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: #414a4f;
-          opacity: 0.75;
+          // background-repeat: no-repeat;
+          // background-position: bottom;
         }
 
         .home h1{
@@ -184,11 +164,8 @@ const Home = (
           font-weight: 5;
           font-size: 40px;
           line-height: 107.5%;
-          /* or 43px */
-          
           text-align: center;
           letter-spacing: 0.055em;
-          
           color: #000000;
         }
 
@@ -196,7 +173,7 @@ const Home = (
           font-family: 'futurist-fixed-width';
           font-style: normal;
           font-weight: 5;
-          font-size: 40px;
+          font-size: 20px;
           line-height: 50px;
           text-align: center;
           color: #1A6D92;
