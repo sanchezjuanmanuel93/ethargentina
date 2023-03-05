@@ -75,6 +75,11 @@ const Home = (
         </div>
       </section>
 
+      <section className="location">
+        <h3>Agosto 16 al 19 2023</h3>
+        <h4>En el CEC Centro de convenciones de Buenos Aires</h4>
+      </section>
+
       <footer>
         <p>Copyright © 2023 Ethereum Argentina - Todos los derechos reservados.</p>
         <p>Made with ♥️ by Ethereum Argentina team</p>
@@ -367,7 +372,38 @@ const Home = (
             padding: 3px;
           }
         }
-                
+        /*-------------
+        Location
+        -------------*/     
+        .location{
+          background-color: #74ACDF;
+        }
+
+        .location h3{
+          margin-top: 50px;
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 25px;
+          line-height: 40px;
+          text-align: center;
+          color: #0B1628;
+          width: 60%;
+        }
+
+        .location h4{
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 20px;
+          line-height: 31px;
+          text-align: center;
+          color: #0B1628;
+          mix-blend-mode: hard-light;
+          width: 50%;
+          margin-top:50px;
+        }
+        
         /*-------------
           Footer
         -------------*/
