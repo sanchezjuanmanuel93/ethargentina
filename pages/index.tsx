@@ -80,6 +80,10 @@ const Home = (
         <h4>En el CEC Centro de convenciones de Buenos Aires</h4>
       </section>
 
+      <section className="more-information">
+        <h3>Más info en breve</h3>
+      </section>
+
       <footer>
         <p>Copyright © 2023 Ethereum Argentina - Todos los derechos reservados.</p>
         <p>Made with ♥️ by Ethereum Argentina team</p>
@@ -402,6 +406,25 @@ const Home = (
           mix-blend-mode: hard-light;
           width: 50%;
           margin-top:50px;
+        }
+
+        /*-------------
+          More Information
+        -------------*/
+        .more-information{
+          background-color: #152640;
+        }
+
+        .more-information h3{
+          font: bold 60px 'becker-wood-type';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 49px;
+          text-align: center;
+          letter-spacing: 0.08em;
+          color: #FFFFFF;
+          mix-blend-mode: hard-light;
         }
         
         /*-------------
