@@ -126,3 +126,8 @@ a {
   font-family: 'futurist-fixed-width';
   src: url('../fonts/futurist_fixed_width.ttf') format('opentype');
  }
+
+ @font-face {
+  font-family: 'futura-md-bt';
+  src: url('../fonts/futura_md_bt.ttf') format('opentype');
+ }

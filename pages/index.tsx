@@ -65,6 +65,16 @@ const Home = (
         </ul>
       </section>
 
+      <section className="be-part">
+        <h1>Aplica</h1>
+        <h3>Formá parte del evento más grande de Argentina</h3>
+        <div>
+          <a href="#"><span>Sponsors</span></a>
+          <a href="#"><span>Voluntarios</span></a>
+          <a href="#"><span>Speakers</span></a>
+        </div>
+      </section>
+
       <footer>
         <p>Copyright © 2023 Ethereum Argentina - Todos los derechos reservados.</p>
         <p>Made with ♥️ by Ethereum Argentina team</p>
@@ -288,6 +298,74 @@ const Home = (
             flex-basis: 100%;
           }
         
+        }
+
+        /*-------------
+        Be part
+      -------------*/
+        .be-part{
+          background-color: #0B1628;
+        }
+
+        .be-part h1{
+          font: bold 60px 'becker-wood-type';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 60px;
+          line-height: 101px;
+          text-align: center;
+          color: #B4F4FE;
+        }
+
+        .be-part h3{
+          margin-top: 50px;
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 25px;
+          line-height: 40px;
+          text-align: center;
+          color: #B4F4FE;
+          width: 60%;
+        }
+
+        .be-part div{
+          margin-top: 50px;
+          display: flex;
+          border: 1px solid #B4F4FE;
+          border-radius: 53.5px;
+          width: 75%;
+          justify-content: space-between;
+          padding: 5px;
+        }
+
+        .be-part div span{
+          background: #50AEE2;
+          font-family: 'futura-md-bt';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 43px;
+          text-align: center;
+          background-color: #0B1628;
+          padding: 5px;
+          border-radius: 53.5px;
+        }
+
+        .be-part div span:hover{
+          background: #50AEE2;
+          color: #0B1628;
+          border-radius: 53.5px;
+        }
+
+        @media (max-width: 800px){
+          .be-part div span{
+            font-size: 1rem;
+            padding: 3px;
+          }
+          .be-part div{
+            padding: 3px;
+          }
         }
                 
         /*-------------
