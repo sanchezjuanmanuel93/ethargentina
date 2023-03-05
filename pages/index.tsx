@@ -3,9 +3,12 @@ import { Header } from "../components/header"
 import { useTranslation, Trans } from 'next-i18next'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Image from 'next/image'
+import logo from '../public/assets/home/logo.svg'
+import art from '../public/assets/home/services/arte.png';
 
-type Props = {
-  // Add custom props here
+interface Props{
+  
 }
 
 const Home = (
@@ -25,14 +28,65 @@ const Home = (
       <Header />
 
       <section className="home">
-        <h1>{t('title')}</h1>
+        <Image
+          alt="Logo"
+          src={logo}
+        />
         <h3>{t('subTitle')}</h3>
-        <a href="https://t.me/+2nijw5YHq_hjODkx" className="btn">{t("joinTelegram")}</a>
+        <h1>{t('title')}</h1>
+        <span className='home-date'>{t('eventDate')}</span>
+      </section>
+
+      <section className="services">
+        <ul className="grid">
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+          <li>
+            <Image alt='Talleres' src={art} width={150} />
+            <h4>Talleres</h4>
+          </li>
+        </ul>
+      </section>
+
+      <section className="be-part">
+        <h1>Aplica</h1>
+        <h3>Formá parte del evento más grande de Argentina</h3>
+        <div>
+          <a href="#"><span>Sponsors</span></a>
+          <a href="#"><span>Voluntarios</span></a>
+          <a href="#"><span>Speakers</span></a>
+        </div>
+      </section>
+
+      <section className="location">
+        <h3>Agosto 16 al 19 2023</h3>
+        <h4>En el CEC Centro de convenciones de Buenos Aires</h4>
+      </section>
+
+      <section className="more-information">
+        <h3>Más info en breve</h3>
       </section>
 
       <footer>
-        <p>Copyright © 2023 Ethereum Argentina - Todos los derechos reservados.</p>
-        <p>Made with ♥️ by Ethereum Argentina team</p>
+        <ul>
+          <li>Telegram</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+        </ul>
       </footer>
       <style jsx>{`
         *{
@@ -136,40 +190,39 @@ const Home = (
           min-height: 100vh;
           color: #fff;
           text-align: center;
-          background-color: #5989BD;
-        }
-
-        .home .background-image{
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          background-color: #2196F3;
-          z-index: -1;
-        }
-
-        .home .background-image:after{
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: #414a4f;
-          opacity: 0.75;
+          background-color: #fff;
+          background-image: url('assets/home/background-bottom.png');
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: 100%;
         }
 
         .home h1{
           font: bold 60px 'becker-wood-type';
           margin-bottom: 15px;
           letter-spacing: .2rem;
+          color: #74ACDF;
         }
 
         .home h3{
-          font: normal 28px;
-          margin-bottom: 40px;
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 40px;
+          line-height: 107.5%;
+          text-align: center;
+          letter-spacing: 0.055em;
+          color: #000000;
+        }
+
+        .home .home-date{
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 20px;
+          line-height: 50px;
+          text-align: center;
+          color: #1A6D92;
         }
 
         .home a.btn{
@@ -207,6 +260,175 @@ const Home = (
         }
 
         /*-------------
+          Services
+        -------------*/
+        .services{
+          background-color: #0B1628;
+        }
+
+        .services .grid{
+          display: flex;
+          justify-content: space-around;
+        }
+
+        .services .grid li{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex-wrap: nowrap;
+        }
+
+        .services .grid li h4{
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 1rem;
+          line-height: 30px;
+          text-align: center;
+          color: #B4F4FE;
+        }
+        
+        @media (max-width: 1000px){
+        
+          .services .grid li{
+            flex-basis: 70%;
+            margin-bottom: 65px;
+          }
+        
+          .services .grid li:last-child{
+            margin-bottom: 0;
+          }
+        
+        }
+        
+        
+        @media (max-width: 600px){
+        
+          .services .grid li{
+            flex-basis: 100%;
+          }
+        
+        }
+
+        /*-------------
+        Be part
+      -------------*/
+        .be-part{
+          background-color: #0B1628;
+        }
+
+        .be-part h1{
+          font: bold 60px 'becker-wood-type';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 60px;
+          line-height: 101px;
+          text-align: center;
+          color: #B4F4FE;
+        }
+
+        .be-part h3{
+          margin-top: 50px;
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 25px;
+          line-height: 40px;
+          text-align: center;
+          color: #B4F4FE;
+          width: 60%;
+        }
+
+        .be-part div{
+          margin-top: 50px;
+          display: flex;
+          border: 1px solid #B4F4FE;
+          border-radius: 53.5px;
+          width: 75%;
+          justify-content: space-between;
+          padding: 5px;
+        }
+
+        .be-part div span{
+          background: #50AEE2;
+          font-family: 'futura-md-bt';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 43px;
+          text-align: center;
+          background-color: #0B1628;
+          padding: 5px;
+          border-radius: 53.5px;
+        }
+
+        .be-part div span:hover{
+          background: #50AEE2;
+          color: #0B1628;
+          border-radius: 53.5px;
+        }
+
+        @media (max-width: 800px){
+          .be-part div span{
+            font-size: 1rem;
+            padding: 3px;
+          }
+          .be-part div{
+            padding: 3px;
+          }
+        }
+        /*-------------
+        Location
+        -------------*/     
+        .location{
+          background-color: #74ACDF;
+        }
+
+        .location h3{
+          margin-top: 50px;
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 25px;
+          line-height: 40px;
+          text-align: center;
+          color: #0B1628;
+          width: 60%;
+        }
+
+        .location h4{
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 20px;
+          line-height: 31px;
+          text-align: center;
+          color: #0B1628;
+          mix-blend-mode: hard-light;
+          width: 50%;
+          margin-top:50px;
+        }
+
+        /*-------------
+          More Information
+        -------------*/
+        .more-information{
+          background-color: #152640;
+        }
+
+        .more-information h3{
+          font: bold 60px 'becker-wood-type';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 49px;
+          text-align: center;
+          letter-spacing: 0.08em;
+          color: #FFFFFF;
+          mix-blend-mode: hard-light;
+        }
+        
+        /*-------------
           Footer
         -------------*/
 
@@ -216,7 +438,7 @@ const Home = (
           align-items: center;
           text-align: center;
           color: #fff;
-          background-color: #5989BD;
+          background-color: #0B1628;
           padding: 60px 0;
         }
 

@@ -3,17 +3,18 @@ import LocaleSwitcher from "./locale-switcher";
 
 export default function Header() {
 
-    return (
-        <>
-            <header>
-                <nav>
-                    <li><a href="https://t.me/+2nijw5YHq_hjODkx" target="_blank" rel="noopener noreferrer">Telegram</a></li>
-                    <li><a href="https://twitter.com/etherargentina?s=11&t=j_w3njfNO2boGMHoQgfS3Q" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                </nav>
-                <LocaleSwitcher />
-            </header>
-            <style jsx>{
-                `
+  return (
+    <>
+      <header>
+        <nav>
+          <li><a href="https://t.me/+2nijw5YHq_hjODkx" target="_blank" rel="noopener noreferrer">About us</a></li>
+          <li><a href="https://t.me/+2nijw5YHq_hjODkx" target="_blank" rel="noopener noreferrer">Sponsorship</a></li>
+          <li><a href="https://twitter.com/etherargentina?s=11&t=j_w3njfNO2boGMHoQgfS3Q" target="_blank" rel="noopener noreferrer">Contact us</a></li>
+        </nav>
+        <LocaleSwitcher />
+      </header>
+      <style jsx>{
+        `
             /*-------------
             Header
           -------------*/
@@ -28,8 +29,8 @@ export default function Header() {
             justify-content: space-between;
             align-items: center;
             color: #fff;
-            padding: 35px 100px 0;
-            background-color: #5989BD;
+            padding: 35px 100px;
+            background-color: #50AEE2;
           }
   
           header nav{
@@ -82,7 +83,7 @@ export default function Header() {
             }
           }
             `}
-            </style>
-        </>
-    )
+      </style>
+    </>
+  )
 }
