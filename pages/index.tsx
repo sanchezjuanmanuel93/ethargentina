@@ -6,11 +6,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
 import logo from '../public/assets/home/logo.svg'
 import art from '../public/assets/home/services/arte.png';
-// import { Inter } from 'next/font/google'
 
-
-type Props = {
-  // Add custom props here
+interface Props{
+  
 }
 
 const Home = (
@@ -30,7 +28,6 @@ const Home = (
       <Header />
 
       <section className="home">
-        {/* <div className="background-image"></div> */}
         <Image
           alt="Logo"
           src={logo}
@@ -85,8 +82,11 @@ const Home = (
       </section>
 
       <footer>
-        <p>Copyright © 2023 Ethereum Argentina - Todos los derechos reservados.</p>
-        <p>Made with ♥️ by Ethereum Argentina team</p>
+        <ul>
+          <li>Telegram</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+        </ul>
       </footer>
       <style jsx>{`
         *{
@@ -191,9 +191,10 @@ const Home = (
           color: #fff;
           text-align: center;
           background-color: #fff;
-          // background-image: url('assets/home/background-bottom.png');
-          // background-repeat: no-repeat;
-          // background-position: bottom;
+          background-image: url('assets/home/background-bottom.png');
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: 100%;
         }
 
         .home h1{
@@ -437,7 +438,7 @@ const Home = (
           align-items: center;
           text-align: center;
           color: #fff;
-          background-color: #5989BD;
+          background-color: #0B1628;
           padding: 60px 0;
         }
 
