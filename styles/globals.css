@@ -121,3 +121,8 @@ a {
   font-family: 'becker-wood-type';
   src: url('../fonts/becker_wood_type.ttf') format('opentype');
  }
+
+ @font-face {
+  font-family: 'futurist-fixed-width';
+  src: url('../fonts/futurist_fixed_width.ttf') format('opentype');
+ }

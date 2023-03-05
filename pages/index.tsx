@@ -3,6 +3,10 @@ import { Header } from "../components/header"
 import { useTranslation, Trans } from 'next-i18next'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Image from 'next/image'
+import logo from '../public/assets/home/logo.svg'
+// import { Inter } from 'next/font/google'
+
 
 type Props = {
   // Add custom props here
@@ -25,9 +29,14 @@ const Home = (
       <Header />
 
       <section className="home">
-        <h1>{t('title')}</h1>
+        {/* <div className="background-image"></div> */}
+        <Image
+          alt="Logo"
+          src={logo}
+        />
         <h3>{t('subTitle')}</h3>
-        <a href="https://t.me/+2nijw5YHq_hjODkx" className="btn">{t("joinTelegram")}</a>
+        <h1>{t('title')}</h1>
+        <span className='home-date'>FECHA</span>
       </section>
 
       <footer>
@@ -136,7 +145,7 @@ const Home = (
           min-height: 100vh;
           color: #fff;
           text-align: center;
-          background-color: #5989BD;
+          background-color: #fff;
         }
 
         .home .background-image{
@@ -146,7 +155,8 @@ const Home = (
           width: 100%;
           height: 100%;
           background-size: cover;
-          background-color: #2196F3;
+          background-color: #fff;
+          // background-image: url('assets/home/background-bottom.png');
           z-index: -1;
         }
 
@@ -165,11 +175,31 @@ const Home = (
           font: bold 60px 'becker-wood-type';
           margin-bottom: 15px;
           letter-spacing: .2rem;
+          color: #74ACDF;
         }
 
         .home h3{
-          font: normal 28px;
-          margin-bottom: 40px;
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 40px;
+          line-height: 107.5%;
+          /* or 43px */
+          
+          text-align: center;
+          letter-spacing: 0.055em;
+          
+          color: #000000;
+        }
+
+        .home .home-date{
+          font-family: 'futurist-fixed-width';
+          font-style: normal;
+          font-weight: 5;
+          font-size: 40px;
+          line-height: 50px;
+          text-align: center;
+          color: #1A6D92;
         }
 
         .home a.btn{
