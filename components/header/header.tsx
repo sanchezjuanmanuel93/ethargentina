@@ -7,18 +7,13 @@ export default function Header() {
     <>
       <header>
         <nav>
-          <li><a href="https://t.me/+2nijw5YHq_hjODkx" target="_blank" rel="noopener noreferrer">About us</a></li>
-          <li><a href="https://t.me/+2nijw5YHq_hjODkx" target="_blank" rel="noopener noreferrer">Sponsorship</a></li>
-          <li><a href="https://twitter.com/etherargentina?s=11&t=j_w3njfNO2boGMHoQgfS3Q" target="_blank" rel="noopener noreferrer">Contact us</a></li>
+          <li><a href="#faqs">FAQS</a></li>
+          <li><a href="#apply">APLICÁ</a></li>
         </nav>
         <LocaleSwitcher />
       </header>
       <style jsx>{
         `
-            /*-------------
-            Header
-          -------------*/
-  
           header{
             position: absolute;
             top: 0;
@@ -28,9 +23,9 @@ export default function Header() {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #fff;
-            padding: 35px 100px;
+            padding: 10px 100px;
             background-color: #50AEE2;
+            color: #152640;
           }
   
           header nav{
@@ -51,28 +46,18 @@ export default function Header() {
           header nav li:last-child{
             margin-right: 0;	
           }
-  
-          header nav li::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: 0;
-            left: 0;
-            background-color: #fff;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-          }
           
-          header nav li:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
+          header nav li a{
+            font-family: 'becker-wood-type';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 46px;
           }
-  
+
           @media (max-width: 1000px){
             header{
-              padding: 20px 50px;
+              padding: 15px 50px;
             }
           }
   

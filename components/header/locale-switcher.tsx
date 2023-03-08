@@ -33,6 +33,14 @@ export default function LocaleSwitcher() {
                 margin: 0 5px;
                 text-transform: uppercase;
             }
+
+            .locales > span {
+                    font-family: 'becker-wood-type';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 25px;
+                    line-height: 46px;
+            }
             `}</style>
         </>
     )
