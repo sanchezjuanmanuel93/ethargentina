@@ -12,6 +12,11 @@ import relax from '../public/assets/home/services/relax.png';
 import juego from '../public/assets/home/services/juego.png';
 import workshop from '../public/assets/home/services/workshop.png';
 
+import twitter from '../public/assets/home/social/twitter.svg';
+import telegram from '../public/assets/home/social/telegram.svg';
+import instagram from '../public/assets/home/social/instagram.svg';
+
+
 interface Props {
 
 }
@@ -88,15 +93,12 @@ const Home = (
         <h4>En el CEC Centro de convenciones de Buenos Aires</h4>
       </section>
 
-      <section className="more-information">
-        <h3>Más info en breve</h3>
-      </section>
-
       <footer>
+        <h3>¡SEGUINOS EN REDES SOCIALES!</h3>
         <ul>
-          <li>Telegram</li>
-          <li>Twitter</li>
-          <li>Instagram</li>
+          <li><a href="telegram.com"><Image src={telegram} alt="Telegram" width={40} /></a></li>
+          <li><Image src={twitter} alt="Twitter" width={40} /></li>
+          <li><Image src={instagram} alt="Instagram" width={40} /></li>
         </ul>
       </footer>
       <style jsx>{`
@@ -275,6 +277,10 @@ const Home = (
         -------------*/
         .services{
           background-color: #0B1628;
+          background-image: url('assets/home/background-bottom-2.png');
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: 100%;
         }
 
         .services h3{
@@ -344,6 +350,11 @@ const Home = (
       -------------*/
         .be-part{
           background-color: #0B1628;
+          height: 100vh;
+          background-image: url('assets/home/background-bottom-3.png');
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: 100%;
         }
 
         .be-part h1{
@@ -410,7 +421,12 @@ const Home = (
         Location
         -------------*/     
         .location{
+          height: 100vh;
           background-color: #74ACDF;
+          background-image: url('assets/home/background-bottom-4.png');
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: 100%;
         }
 
         .location h3{
@@ -443,6 +459,10 @@ const Home = (
         -------------*/
         .more-information{
           background-color: #152640;
+          background-image: url('assets/home/background-bottom-4.png');
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: 100%;
         }
 
         .more-information h3{
@@ -497,6 +517,19 @@ const Home = (
 
         footer p a{
           color: #fff;
+        }
+
+        footer h3 {
+            font: bold 60px 'becker-wood-type';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 49px;
+            text-align: center;
+            letter-spacing: 0.08em;
+            color: #B4F4FE;
+            mix-blend-mode: hard-light;
+            padding-bottom: 50px;
         }
 
         @media (max-width: 700px){
