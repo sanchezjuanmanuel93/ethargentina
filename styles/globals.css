@@ -131,3 +131,8 @@ a {
   font-family: 'futura-md-bt';
   src: url('../fonts/futura_md_bt.ttf') format('opentype');
  }
+
+ @font-face {
+  font-family: 'futura-book-bt';
+  src: url('../fonts/futura_book_bt.ttf') format('opentype');
+ }

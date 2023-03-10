@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import { Header } from "../components/header"
+import Accordeon from "../components/accordeon"
 import { useTranslation, Trans } from 'next-i18next'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
-import logo from '../public/assets/home/logo.svg'
+import logo from '../public/assets/home/logo-text.svg'
 import art from '../public/assets/home/services/arte.png';
 import mate from '../public/assets/home/services/mate.png';
 import comida from '../public/assets/home/services/comida.png';
@@ -42,8 +43,6 @@ const Home = (
           alt="Logo"
           src={logo}
         />
-        <h3>{t('subTitle')}</h3>
-        <h1>{t('title')}</h1>
         <span className='home-date'>{t('eventDate')}</span>
       </section>
 
@@ -89,8 +88,10 @@ const Home = (
       </section>
 
       <section className="location">
-        <h3>Agosto 16 al 19 2023</h3>
-        <h4>En el CEC Centro de convenciones de Buenos Aires</h4>
+        <h3>FAQS</h3>
+        <Accordeon title="¿Dónde y cuándo será el evento?" content="El evento se realizará del 16 al 19 de Agosto del 2023 en el CEC, Centro de convenciones de Buenos Aires, Argentina." />
+        <Accordeon title="¿Como conseguir entradas para el evento ethereum argentina?" content="La fecha del lanzamiento de tickets se anunciará próximamente a través de nuestras redes sociales." />
+        <Accordeon title="¿Soy nuevo en ethereum, ¿puedo participar?" content="¡Absolutamente! Nuestra agenda contempla charlas tanto para principiantes como para expertos en web3. Pueden participar todos aquellos que están involucrados/interesados en el ecosistema Ethereum y quieren profundizar más, independientemente de los conocimientos previos." />
       </section>
 
       <footer>
@@ -430,15 +431,10 @@ const Home = (
         }
 
         .location h3{
-          margin-top: 50px;
-          font-family: 'futurist-fixed-width';
-          font-style: normal;
-          font-weight: 5;
-          font-size: 25px;
-          line-height: 40px;
-          text-align: center;
-          color: #0B1628;
-          width: 60%;
+            font: bold 32px 'becker-wood-type';
+            margin-bottom: 50px;
+            letter-spacing: .2rem;
+            color: #0B1628;
         }
 
         .location h4{
